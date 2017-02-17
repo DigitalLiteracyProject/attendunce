@@ -1,0 +1,23 @@
+{
+  "name": "attendunce",
+  "version": "1.0.0",
+  "description": "Attendunce Project for Digital Literacy Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DigitalLiteracyProject/attendunce.git"
+  },
+  "author": "Daniel Chen and Jayant Sani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DigitalLiteracyProject/attendunce/issues"
+  },
+  "homepage": "https://github.com/DigitalLiteracyProject/attendunce#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}
