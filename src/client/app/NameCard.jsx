@@ -22,11 +22,11 @@ class NameCard extends React.Component {
 		const status = this.state.clicked
 
 		if (status == 0){
-			return <p style={pStylePresent} onClick={this.updateClick}>{this.props.name}: {this.state.clicked} </p>;
+			return <p style={pStylePresent} onClick={this.updateClick}>{this.props.name}</p>;
 		} else if (status == 1) {
-			return <p style={pStyleAbsent} onClick={this.updateClick}>{this.props.name}: {this.state.clicked} </p>;
+			return <p style={pStyleAbsent} onClick={this.updateClick}>{this.props.name}</p>;
 		} else {
-			return <p style={pStyleLate} onClick={this.updateClick}>{this.props.name}: {this.state.clicked} </p>;
+			return <p style={pStyleLate} onClick={this.updateClick}>{this.props.name}</p>;
 		}
 	}
 
