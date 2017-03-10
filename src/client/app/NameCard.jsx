@@ -10,12 +10,29 @@ class NameCard extends React.Component {
 	}
 
 	render() {
-		return <p onClick={this.updateClick}>{this.props.name}: {this.state.clicked}</p>;
+		const pStylePresent = {
+			color: 'green',
+		}
+		const pStyleAbsent = {
+			color: 'red',
+		}
+		const pStyleLate = {
+			color: 'olive',
+		}
+		const status = this.state.clicked
+
+		if (status == 0){
+			return <p style={pStylePresent} onClick={this.updateClick}>{this.props.name}: {this.state.clicked} </p>;
+		} else if (status == 1) {
+			return <p style={pStyleAbsent} onClick={this.updateClick}>{this.props.name}: {this.state.clicked} </p>;
+		} else {
+			return <p style={pStyleLate} onClick={this.updateClick}>{this.props.name}: {this.state.clicked} </p>;
+		}
 	}
 
 	_updateClick() {
 		this.setState({
-			clicked: this.state.clicked + 1,
+			clicked: (this.state.clicked + 1) % 3,
 		});
 		this.props.clickedHandler(this.props.name);
 	}
